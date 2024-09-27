@@ -1,0 +1,293 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px 10px;
+}
+
+/* Header and Menu */
+.header_menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header_menu ul {
+  gap: 50px;
+  font-size: 18px;
+  display: flex;
+  list-style: none;
+}
+
+.header_menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+}
+
+.header_menu img {
+  margin-top: -40px;
+  width: 130px;
+  height: 130px;
+}
+
+.header_menu_location {
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.header_menu_location i {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.header_menu_icons {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header_menu_icons i {
+  margin-left: 15px;
+}
+
+/* Lower menu */
+.header_lower_menu {
+  margin: 20px 0;
+  background-color: #F0F0F4;
+  padding: 17px 0;
+}
+
+.header_lower_menu ul {
+  justify-content: center;
+  list-style: none;
+  gap: 50px;
+  display: flex;
+}
+
+/* Buttons Styling */
+.sale-btn {
+  background-color: #1C62CD;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-btn {
+  background-color: #1C62CD;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sale-btn:hover, .buy-btn:hover {
+  background-color: #164da0;
+}
+
+/* Responsive */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 1072px) {
+  .header_menu ul, .header_lower_menu ul {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .header_menu.active ul, .header_lower_menu.active ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  /* Hide location and icons on smaller screens */
+  .header_menu_location, .header_menu_icons {
+    display: none;
+  }
+  /* Section responsive fix */
+  .section_one {
+    display: block;
+  }
+  .section_one_left, .section_one_right {
+    width: 100%;
+    text-align: center;
+  }
+  .section_one_right_table {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    margin: 20px;
+  }
+  .header_menu img {
+    width: 100px;
+    height: 100px;
+    margin-top: -30px;
+  }
+}
+.section_three {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.section_three_card1 {
+  flex: 1 1 calc(33% - 20px);
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.section_three_card1 h2 {
+  margin-bottom: 10px;
+}
+
+.section_three_card1 img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Section Four Styles */
+.section_four {
+  margin-bottom: 30px;
+}
+
+.section_four h2 {
+  margin-bottom: 20px;
+}
+
+.section_four_navs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.section_four_navs a {
+  text-decoration: none;
+  color: #333;
+}
+
+.section_four_cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container_1_section4 {
+  flex: 1 1 calc(25% - 20px);
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.container_1_img_section4 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container_1_info_section4 p {
+  margin: 10px 0;
+}
+
+.section_four_button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Section Five Styles */
+.section_five {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.section_five_imgs img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section_five_notes {
+  text-align: center;
+}
+
+.section_five_btn {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Section Six Styles */
+.section_six {
+  margin-bottom: 30px;
+}
+
+.section_six h2 {
+  margin-bottom: 20px;
+}
+
+.section_six_navs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.section_six_navs a {
+  text-decoration: none;
+  color: #333;
+}
+
+.section_six_cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 20px;
+}
+
+.footer_section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer_section_nav ul {
+  list-style: none;
+}
+
+.footer_section_nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.social_icons img {
+  margin-right: 15px;
+}
+
+.footer_section_last_info p {
+  margin-top: 10px;
+}/*# sourceMappingURL=main.css.map */
